@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 
 <head>
@@ -12,47 +12,80 @@
       background-color: #ffffff;
       font-family: 'Poppins', Arial, sans-serif;
       color: #333;
+      margin: 0;
+      padding: 0;
     }
+
+    .email-wrapper {
+      max-width: 650px;
+      margin: auto;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
     .otp-box {
       background-color: #d9dfcd;
       color: #000;
-      min-width: 50px;
+      min-width: 55px;
       text-align: center;
       font-weight: 700;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       border-radius: 8px;
-      padding: 12px;
+      padding: 14px;
     }
+
     .footer-line {
       border-top: 1px solid #e0e0e0;
       margin: 2rem 0;
     }
+
     .brand-green {
       color: #6c7d56;
+    }
+
+    /* Desktop-specific adjustments */
+    @media (min-width: 992px) {
+      .message-section {
+        padding: 2rem 3rem;
+        font-size: 1.05rem;
+        line-height: 1.6;
+      }
+
+      .otp-box {
+        font-size: 1.8rem;
+        padding: 18px;
+        min-width: 60px;
+      }
+
+      .signature {
+        padding: 0 3rem;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <div class="container my-4">
-    <div class="mx-auto" style="max-width:600px;">
+  <div class="container my-5">
+    <div class="email-wrapper">
 
       <!-- Logo -->
-      <div class="text-center mb-3">
+      <div class="text-center py-3">
         <img src="logo.png" alt="Domesta Logo" class="img-fluid" style="max-height: 80px;">
       </div>
 
       <!-- Banner -->
-      <div class="overflow-hidden rounded-top mt-5 mb-5" 
-           style="background: url('banner.png') 10px/cover no-repeat; height: 200px;">
+      <div class="overflow-hidden"
+           style="background: url('banner.png') center/cover no-repeat; height: 200px;">
       </div>
 
       <!-- Message -->
-      <div class="px-4">
+      <div class="message-section">
         <h4 class="fw-semibold mb-3">Hi <span id="username">Lokachi</span>,</h4>
         <p>Here is your One Time Password (OTP).<br>
-        Please enter this code to verify your email address for <b>Domesta</b></p>
+          Please enter this code to verify your email address for <b>Domesta</b>.</p>
       </div>
 
       <!-- OTP -->
@@ -71,7 +104,7 @@
       </div>
 
       <!-- Signature -->
-      <div class="px-4 mb-3">
+      <div class="signature mb-3">
         <p>Best Regards,<br>
           <span class="brand-green fw-semibold">Domesta</span>
         </p>
@@ -91,7 +124,7 @@
       </div>
 
       <!-- Footer -->
-      <div class="text-center text-muted small mb-4">
+      <div class="text-center text-muted small mb-4 px-3">
         You are receiving this email because you signed up at Domesta.<br>
         If you did not create an account, you can ignore this email.<br><br>
         © 2025 Domesta, All Rights Reserved.
