@@ -1,175 +1,104 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <title>Email Verification</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Bootstrap CSS -->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      background-color: #ffffff;
-      font-family: 'Poppins', Arial, sans-serif;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
-
-    .email-wrapper {
-      max-width: 650px;
-      margin: auto;
-      background: #fff;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-      border-radius: 10px;
-      overflow: hidden;
-    }
-
-    /*  Logo centering */
-    .logo img {
-      display: block;
-      margin: 0 auto;
-      max-width: 200px;
-      height: auto;
-    }
-
-    /*  OTP boxes fix */
-    .otp-container {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: nowrap;
-    }
-
-    .otp-box {
-      background-color: #d9dfcd;
-      color: #000;
-      width: 55px;
-      height: 55px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 1.6rem;
-      border-radius: 8px;
-    }
-
-    .footer-line {
-      border-top: 1px solid #e0e0e0;
-      margin: 3rem 0;
-    }
-
-    .brand-green {
-      color: #6c7d56;
-    }
-
-    /* Desktop-specific adjustments */
-    @media (min-width: 992px) {
-      .message-section {
-        padding: 2rem 3rem;
-        font-size: 1.05rem;
-        line-height: 1.6;
-      }
-
-      .otp-box {
-        font-size: 1.8rem;
-        width: 60px;
-        height: 60px;
-      }
-
-      .signature {
-        padding: 0 3rem;
-      }
-      .icons{
-        width:30px;
-        height: 30px;
-        border-radius: 50%;
-        float: left;
-        background-color: olive;
-        margin: 10px;
-        color: white;
-        margin-left: 10px;
-        text-align: center;
-        padding:4px;
-        position: relative;
-        left:50%;
-        top:12%;
-      }
-      .main{
-        margin-top: 10px;
-      }
-    }
-  </style>
 </head>
 
-<body>
+<body style="margin:0; padding:0; font-family: Arial, sans-serif; background-color:#ffffff;">
 
-  <div class="container my-5">
-    <div class="email-wrapper">
+  <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%"
+    style="background-color:#ffffff; max-width:650px; border:1px solid #e0e0e0; border-radius:10px; overflow:hidden;">
 
-      <!-- Logo -->
-      <div class="logo py-3">
-        <img src="https://media.domesta.com/logo.png" alt="Domesta Logo">
-      </div>
+    <!-- Logo -->
+    <tr>
+      <td align="center" style="padding:20px;">
+        <img src="https://media.domesta.com/logo.png" alt="Domesta Logo" style="max-width:200px; height:auto;">
+      </td>
+    </tr>
 
-      <!-- Banner -->
-      <div class="overflow-hidden m-3"
-           style="background: url('https://media.domesta.com/banner.png') 8px/cover no-repeat; height: 200px;border-radius: 10px 10px 0px 0px;">
-      </div>
+    <!-- Banner -->
+    <tr>
+      <td style="width:94%;background:url('https://media.domesta.com/banner.png') 4px/cover no-repeat; height:200px; border-radius:10px 10px 0 0;">
+      </td>
+    </tr>
 
-      <!-- Message -->
-      <div class="message-section m-2">
-        <h4 class="fw-semibold m-4">Hi <span id="username">Lokachi</span>,</h4>
-        <p class="m-4">Here is your One Time Password (OTP).<br>
-          Please enter this code to verify your email address for <b>Domesta</b>.</p>
-      </div>
-
-      <!-- OTP -->
-      <div class="text-center my-4">
-        <div class="otp-container m-2">
-          <div class="otp-box">5</div>
-          <div class="otp-box">7</div>
-          <div class="otp-box">2</div>
-          <div class="otp-box">0</div>
-        </div>
-      </div>
-
-      <!-- Expiry -->
-      <div class="text-center mb-8">
-        <p class="m-2">OTP will expire in <b>5 minutes</b>.</p>
-      </div>
-
-      <!-- Signature -->
-      <div class="signature mb-3 m-4">
-        <p>Best Regards,<br>
-          <span style="color: olive;" class="fw-semibold">Domesta</span>
+    <!-- Message -->
+    <tr>
+      <td style="padding:30px; color:#333333; font-size:16px; line-height:1.5;">
+        <h2 style="margin:0; font-size:20px; font-weight:600;">Hi Lokachi,</h2>
+        <p style="margin:20px 0 0 0;">
+          Here is your One Time Password (OTP).<br>
+          Please enter this code to verify your email address for <b>Domesta</b>.
         </p>
-      </div>
+      </td>
+    </tr>
 
-      <!-- Divider -->
-      <div class="footer-line"></div>
+    <!-- OTP -->
+    <tr>
+      <td align="center" style="padding:20px 0;">
+        <table role="presentation" cellspacing="10" cellpadding="0" border="0">
+          <tr>
+            <td style="background:#d9dfcd; font-size:22px; font-weight:bold; width:55px; height:55px; text-align:center; border-radius:8px;">5</td>
+            <td style="background:#d9dfcd; font-size:22px; font-weight:bold; width:55px; height:55px; text-align:center; border-radius:8px;">7</td>
+            <td style="background:#d9dfcd; font-size:22px; font-weight:bold; width:55px; height:55px; text-align:center; border-radius:8px;">2</td>
+            <td style="background:#d9dfcd; font-size:22px; font-weight:bold; width:55px; height:55px; text-align:center; border-radius:8px;">0</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
 
-      <!-- Social Media Icons -->
-      <div class="text-center main  mb-5">
-        <div class="icons mx-2">
-          <span ><i class="bi bi-facebook"></i></span>  
-        </div>
-        <div class="icons mx-2">
-          <span><i class="bi bi-instagram"></i></span>  
-        </div>
-      
-       </div>
-             <div class="footer-line"></div>
-      <!-- Footer -->
-      <div class="text-center text-muted small mb-4 px-3">
+    <!-- Expiry -->
+    <tr>
+      <td align="center" style="padding:10px; font-size:14px; color:#555;">
+        OTP will expire in <b>5 minutes</b>.
+      </td>
+    </tr>
+
+    <!-- Signature -->
+    <tr>
+      <td style="padding:20px 30px; font-size:14px; color:#333;">
+        Best Regards,<br>
+        <span style="color:olive; font-weight:600;">Domesta</span>
+      </td>
+    </tr>
+
+    <!-- Divider -->
+    <tr>
+      <td style="border-top:1px solid #e0e0e0;"></td>
+    </tr>
+
+    <!-- Social Media -->
+    <tr>
+      <td align="center" style="padding:20px;">
+        <a href="https://facebook.com" style="margin:0 10px; text-decoration:none;">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="30" height="30"
+            style="display:inline-block;">
+        </a>
+        <a href="https://instagram.com" style="margin:0 10px; text-decoration:none;">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="30" height="30"
+            style="display:inline-block;">
+        </a>
+      </td>
+    </tr>
+
+    <!-- Divider -->
+    <tr>
+      <td style="border-top:1px solid #e0e0e0;"></td>
+    </tr>
+
+    <!-- Footer -->
+    <tr>
+      <td align="center" style="padding:20px; font-size:12px; color:#888888; line-height:1.5;">
         You are receiving this email because you signed up at Domesta.<br>
         If you did not create an account, you can ignore this email.<br><br>
         © 2025 Domesta, All Rights Reserved.
-      </div>
+      </td>
+    </tr>
 
-    </div>
-  </div>
+  </table>
 
 </body>
 </html>
